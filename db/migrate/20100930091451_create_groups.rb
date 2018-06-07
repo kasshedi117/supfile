@@ -1,4 +1,4 @@
-class CreateGroups < ActiveRecord::Migration[5.2]
+class CreateGroups < ActiveRecord::Migration[5.0]
   def self.up
     create_table :groups do |t|
       t.string :name

@@ -12,10 +12,6 @@
   <span class="folder_menu"><%= image_tag('folder_add.png', :alt => t(:create_a_new_folder)) %> <%= link_to t(:create_a_new_folder), new_folder_folder_path(@folder) %></span>
   <span class="folder_menu"><%= image_tag('file_add.png', :alt => t(:upload_a_file)) %> <%= link_to t(:upload_a_file), new_folder_file_path(@folder) %></span>
 <% end -%>
-<% if current_user.member_of_admins? -%>
-  <span class="folder_menu" id="permissions_link"><span><%= image_tag('permissions.png', :alt => t(:permissions)) %> <%= link_to t(:permissions), '#', :class => 'permissions_link' %></span></span>
-<% end -%>
-  <span class="folder_menu" id="clipboard_link"><span><%= image_tag('clipboard.png', :alt => t(:clipboard)) %> <%= link_to t(:clipboard), '#', :class => 'clipboard_link' %></span></span>
 </p>
 <div id="files_and_folders">
   <table>

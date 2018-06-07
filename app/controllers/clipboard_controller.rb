@@ -2,9 +2,9 @@ class ClipboardController < ApplicationController
   before_action :require_existing_item, :except => :reset
   before_action :require_existing_target_folder, :only => [:copy, :move]
   before_action :require_target_is_not_child, :only => :move
- # before_action :require_create_permission, :only => [:copy, :move]
- # before_action :require_read_permission, :only => [:create, :copy, :move]
- # before_action :require_delete_permission, :only => :move
+  before_action :require_create_permission, :only => [:copy, :move]
+  before_action :require_read_permission, :only => [:create, :copy, :move]
+  before_action :require_delete_permission, :only => :move
 
   # @item is set in require_existing_item
   def create

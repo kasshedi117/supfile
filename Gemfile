@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'rails', '5.2.0'
+gem 'rails'
 gem 'sqlite3'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2.1'
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
 gem 'jquery-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -15,9 +15,9 @@ gem 'dynamic_form'
 gem 'acts_as_tree'
 gem 'paperclip'
 gem 'jquery-fileupload-rails'
-gem 'json'
+gem 'tzinfo-data'
 group :development do
-  gem 'web-console', '~> 2.0'
+  gem 'web-console'
 end
 
 group :test do

@@ -2,10 +2,10 @@ class FilesController < ApplicationController
   before_action :require_existing_file, :only => [:show, :edit, :update, :destroy]
   before_action :require_existing_target_folder, :only => [:new, :create]
 
- # before_action :require_create_permission, :only => [:new, :create]
- # before_action :require_read_permission, :only => :show
- # before_action :require_update_permission, :only => [:edit, :update]
- # before_action :require_delete_permission, :only => :destroy
+  before_action :require_create_permission, :only => [:new, :create]
+  before_action :require_read_permission, :only => :show
+  before_action :require_update_permission, :only => [:edit, :update]
+  before_action :require_delete_permission, :only => :destroy
 
   # @file and @folder are set in require_existing_file
   def show
@@ -45,7 +45,7 @@ class FilesController < ApplicationController
   def exists
     @folder = Folder.find(params[:folder])
 
-    if current_user.can_read @folder || current_user.can_write(@folder)
+    if current_user.can_read(@folder) || current_user.can_write(@folder)
       @file = @folder.user_files.build(:attachment_file_name => params[:name].gsub(RESTRICTED_CHARACTERS, '_'))
       render :json => !@file.valid?
     end

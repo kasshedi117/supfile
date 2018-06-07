@@ -1,4 +1,4 @@
-class PopulateUserIdInShareLinks < ActiveRecord::Migration[5.2]
+class PopulateUserIdInShareLinks < ActiveRecord::Migration[5.0]
   def change
     active_users = User.where.not(:name => nil)
 

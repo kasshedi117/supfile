@@ -1,4 +1,4 @@
-class CreateGroupsUsers < ActiveRecord::Migration[5.2]
+class CreateGroupsUsers < ActiveRecord::Migration[5.0]
   def self.up
     create_table :groups_users, :id => false do |t|
       t.references :group

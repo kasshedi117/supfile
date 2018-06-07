@@ -1,4 +1,4 @@
-class AlterColumnTypeIsAdminFromUsers < ActiveRecord::Migration[5.2]
+class AlterColumnTypeIsAdminFromUsers < ActiveRecord::Migration[5.0]
   def self.up
     change_column :users, :is_admin, :boolean
   end

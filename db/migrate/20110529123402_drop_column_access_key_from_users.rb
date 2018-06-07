@@ -1,4 +1,4 @@
-class DropColumnAccessKeyFromUsers < ActiveRecord::Migration[5.2]
+class DropColumnAccessKeyFromUsers < ActiveRecord::Migration[5.0]
   def self.up
     remove_column :users, :access_key
   end

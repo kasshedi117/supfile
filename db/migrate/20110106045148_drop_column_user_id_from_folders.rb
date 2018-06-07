@@ -1,4 +1,4 @@
-class DropColumnUserIdFromFolders < ActiveRecord::Migration[5.2]
+class DropColumnUserIdFromFolders < ActiveRecord::Migration[5.0]
   def self.up
     remove_column :folders, :user_id
   end

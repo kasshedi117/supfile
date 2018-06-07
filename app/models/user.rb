@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   before_create :set_signup_token
   before_save :clear_reset_password_token, :unless => :dont_clear_reset_password_token
   before_update :clear_signup_token
-  #after_create :create_root_folder_and_admins_group, :if => :is_admin
+  after_create :create_root_folder_and_admins_group, :if => :is_admin
   before_destroy :dont_destroy_admin
 
   %w{create read update delete}.each do |method|

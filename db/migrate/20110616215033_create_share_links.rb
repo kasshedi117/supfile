@@ -1,4 +1,4 @@
-class CreateShareLinks < ActiveRecord::Migration[5.2]
+class CreateShareLinks < ActiveRecord::Migration[5.0]
   def self.up
     create_table :share_links do |t|
       t.string :emails

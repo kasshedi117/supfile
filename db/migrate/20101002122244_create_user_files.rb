@@ -1,4 +1,4 @@
-class CreateUserFiles < ActiveRecord::Migration[5.2]
+class CreateUserFiles < ActiveRecord::Migration[5.0]
   def self.up
     create_table :user_files do |t|
       t.string :attachment_file_name
