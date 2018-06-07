@@ -1,6 +1,6 @@
 class AdminsController < ApplicationController
   skip_before_action :require_admin_in_system, :require_login
-  before_action :require_no_admin
+//  before_action :require_no_admin
 
   def new
     @user = User.new
